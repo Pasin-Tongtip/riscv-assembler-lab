@@ -1,7 +1,7 @@
-RISC-V Two-Pass Assembler
+# RISC-V Two-Pass Assembler
 A lightweight C-based assembler that translates RISC-V assembly language into machine code. The project utilizes a two-pass architecture to resolve label addresses for branches and jumps.
 
-🚀 Features
+## 🚀 Features
 Two-Pass Pipeline:
 
 Pass 1: Scans the source file to build a Symbol Table, recording the addresses of all labels.
@@ -12,7 +12,7 @@ Symbol Management: Robust label tracking with duplicate detection and address ma
 
 Binary Output: Generates .bin files containing the encoded machine instructions.
 
-📁 Project Structure
+## 📁 Project Structure
 The project is organized based on the modular architecture defined in the Makefile:
 
 File	Description
@@ -25,14 +25,15 @@ src/parser.c	Handles string tokenization and instruction identification.
 src/encode.c	Translates parsed instructions into 32-bit RISC-V machine code.
 src/instr_table.c	Look-up table for RISC-V opcodes, funct3, and funct7 values.
 
-💻 Usage
+## 💻 Usage
 The assembler accepts a single RISC-V assembly file as an argument:
 
 Bash
 ./assembler examples/test_case_20.s
+
 The output will be saved as examples/test_case_20.bin.
 
-🧪 Test Cases
+## 🧪 Test Cases
 The following test cases are included to verify assembler stability:
 
 Basic Arithmetic (test_case_20.s): ~20 lines testing R-type and I-type instructions.
@@ -41,7 +42,7 @@ Array Logic (test_case_50.s): ~50 lines exercising loops and memory access (sw/l
 
 Stress Test (test_case_120.s): 120+ lines featuring recursive factorial logic, deep stack usage, and long-distance label resolution.
 
-⚠️ Implementation Notes
+## ⚠️ Implementation Notes
 Symbol Limits: The table supports up to 256 unique labels.
 
 Label Length: Maximum label length is 50 characters.
