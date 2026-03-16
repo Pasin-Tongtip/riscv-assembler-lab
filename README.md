@@ -24,15 +24,7 @@ Implementation of the Symbol Table (add, find, reset).
 src/parser.c	Handles string tokenization and instruction identification.
 src/encode.c	Translates parsed instructions into 32-bit RISC-V machine code.
 src/instr_table.c	Look-up table for RISC-V opcodes, funct3, and funct7 values.
-🛠️ Building the Project
-Use the provided Makefile to compile the assembler:
 
-Bash
-# Compile the project
-make
-
-# Clean build artifacts
-make clean
 💻 Usage
 The assembler accepts a single RISC-V assembly file as an argument:
 
